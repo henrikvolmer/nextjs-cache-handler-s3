@@ -4,7 +4,7 @@ import { CacheHandler } from "@neshca/cache-handler";
 
 CacheHandler.onCreation(async ({ buildId }) => {
     const client = new S3({ region: process.env.AWS_REGION });
-    const bucketName = process.env.AWS_BUCKET_NAME;
+    const bucketName = process.env.CACHE_BUCKET_NAME;
     const prefix = process.env.CACHE_PREFIX + buildId;
     const tagPrefix = `TAG${prefix}`;
     const cacheExtension = "json";

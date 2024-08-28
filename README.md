@@ -36,6 +36,6 @@ Necessary environment variables:
 AWS_REGION=us-east-1
 AWS_ACCESS_KEY_ID=your-access-key-id
 AWS_SECRET_ACCESS_KEY=your-secret-access-key
-AWS_BUCKET_NAME=your-s3-bucket
+CACHE_BUCKET_NAME=your-s3-bucket
 CACHE_PREFIX=some-prefix
 ```
