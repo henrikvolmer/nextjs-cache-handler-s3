@@ -16,3 +16,26 @@ Install the package using npm:
 ```bash
 npm install @henrikvolmer/nextjs-cache-handler-s3
 ```
+
+## Configuration
+
+next.config.js:
+
+```javascript
+module.exports = {
+    cacheHandler:
+        process.env.NODE_ENV === "production"
+            ? require.resolve("@henrikvolmer/nextjs-cache-handler-s3")
+            : undefined,
+};
+```
+
+Necessary environment variables:
+
+```plaintext
+AWS_REGION=us-east-1
+AWS_ACCESS_KEY_ID=your-access-key-id
+AWS_SECRET_ACCESS_KEY=your-secret-access-key
+AWS_BUCKET_NAME=your-s3-bucket
+CACHE_PREFIX=some-prefix
+```

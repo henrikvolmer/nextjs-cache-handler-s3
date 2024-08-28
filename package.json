@@ -1,6 +1,6 @@
 {
     "name": "@henrikvolmer/nextjs-cache-handler-s3",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "NextJS shared cache handler for AWS S3",
     "type": "module",
     "exports": {
