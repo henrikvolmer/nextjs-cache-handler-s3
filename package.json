@@ -17,7 +17,8 @@
     "scripts": {
         "build": "unbuild",
         "build:stub": "unbuild --stub",
-        "lint": "prettier --check . && eslint . --ext .ts,.js"
+        "lint": "prettier --check . && eslint . --ext .ts,.js",
+        "prepare": "npm run lint && npm run build"
     },
     "repository": {
         "type": "git",
