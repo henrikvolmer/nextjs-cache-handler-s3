@@ -1,0 +1,56 @@
+{
+    "name": "@henrikvolmer/nextjs-cache-handler-s3",
+    "version": "1.0.0",
+    "description": "NextJS shared cache handler for AWS S3",
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "main": "./dist/index.cjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "unbuild",
+        "build:stub": "unbuild --stub",
+        "lint": "prettier --check . && eslint . --ext .ts,.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/henrikvolmer/nextjs-cache-handler-s3.git"
+    },
+    "keywords": [
+        "NextJS",
+        "AWS",
+        "S3",
+        "Cache"
+    ],
+    "author": "Henrik Volmer",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/henrikvolmer/nextjs-cache-handler-s3/issues"
+    },
+    "homepage": "https://github.com/henrikvolmer/nextjs-cache-handler-s3#readme",
+    "devDependencies": {
+        "@types/node": "^22.5.0",
+        "aws-sdk-client-mock": "^4.0.1",
+        "aws-sdk-client-mock-jest": "^4.0.1",
+        "eslint": "^8.57.0",
+        "eslint-import-resolver-typescript": "^3.6.3",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-no-only-tests": "^3.3.0",
+        "prettier": "^3.3.3",
+        "typescript": "^5.5.4",
+        "typescript-eslint": "^8.3.0",
+        "unbuild": "^2.0.0"
+    },
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.637.0",
+        "@neshca/cache-handler": "^1.6.0",
+        "crypto": "^1.0.1"
+    }
+}
