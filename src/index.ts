@@ -3,7 +3,12 @@ import { S3 } from "@aws-sdk/client-s3";
 import { CacheHandler } from "@neshca/cache-handler";
 
 CacheHandler.onCreation(async ({ buildId }) => {
-    const client = new S3({ region: process.env.AWS_REGION });
+    const client = new S3({
+        region: process.env.AWS_REGION,
+        endpoint: process.env.CACHE_S3_ENDPOINT,
+        forcePathStyle: process.env.CACHE_S3_PATH_STYLE === "true",
+    });
+    
     const bucketName = process.env.CACHE_BUCKET_NAME;
     const prefix = process.env.CACHE_PREFIX + buildId;
     const tagPrefix = `TAG${prefix}`;
