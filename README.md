@@ -45,13 +45,14 @@ CACHE_PREFIX=some-prefix
 This cache handler works with any S3-compatible storage provider. Here are configuration examples for popular alternatives:
 
 ### MinIO
-```plaintext 
-AWS_REGION=us-east-1 
-AWS_ACCESS_KEY_ID=minioadmin 
-AWS_SECRET_ACCESS_KEY=minioadmin 
+
+```plaintext
+AWS_REGION=us-east-1
+AWS_ACCESS_KEY_ID=minioadmin
+AWS_SECRET_ACCESS_KEY=minioadmin
 CACHE_S3_ENDPOINT=http://localhost:9000
 CACHE_S3_PATH_STYLE=true
-CACHE_BUCKET_NAME=nextjs-cache 
+CACHE_BUCKET_NAME=nextjs-cache
 ```
 
 ### Google Cloud
@@ -65,22 +66,21 @@ CACHE_S3_ENDPOINT=https://storage.googleapis.com
 
 ### DigitalOcean Spaces
 
-```plaintext 
-AWS_REGION=nyc3 
-AWS_ACCESS_KEY_ID=your-spaces-access-key 
-AWS_SECRET_ACCESS_KEY=your-spaces-secret-key 
-CACHE_S3_ENDPOINT=https://nyc3.digitaloceanspaces.com 
+```plaintext
+AWS_REGION=nyc3
+AWS_ACCESS_KEY_ID=your-spaces-access-key
+AWS_SECRET_ACCESS_KEY=your-spaces-secret-key
+CACHE_S3_ENDPOINT=https://nyc3.digitaloceanspaces.com
 CACHE_BUCKET_NAME=your-space-name
 ```
 
-
 ### Hetzner Object Storage
 
-```plaintext 
-AWS_REGION=us-east-1 
-AWS_ACCESS_KEY_ID=your-hetzner-access-key 
-AWS_SECRET_ACCESS_KEY=your-hetzner-secret-key 
+```plaintext
+AWS_REGION=us-east-1
+AWS_ACCESS_KEY_ID=your-hetzner-access-key
+AWS_SECRET_ACCESS_KEY=your-hetzner-secret-key
 CACHE_S3_ENDPOINT=https://nbg1.your-project.hetzner.cloud
 CACHE_S3_PATH_STYLE=true
-CACHE_BUCKET_NAME=nextjs-cache 
+CACHE_BUCKET_NAME=nextjs-cache
 ```

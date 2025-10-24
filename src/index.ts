@@ -8,7 +8,7 @@ CacheHandler.onCreation(async ({ buildId }) => {
         endpoint: process.env.CACHE_S3_ENDPOINT,
         forcePathStyle: process.env.CACHE_S3_PATH_STYLE === "true",
     });
-    
+
     const bucketName = process.env.CACHE_BUCKET_NAME;
     const prefix = process.env.CACHE_PREFIX + buildId;
     const tagPrefix = `TAG${prefix}`;
